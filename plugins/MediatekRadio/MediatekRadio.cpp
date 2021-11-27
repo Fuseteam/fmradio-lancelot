@@ -78,7 +78,7 @@ bool MediatekRadio::isHeadsetAvailable() {
 
 // check if there is an actual antenna available
 bool MediatekRadio::isAntennaAvailable() {
-            if (system.get("ro.vendor.mtk_fm_short_antenna_support").equals("1")) {
+            if (system("getprop ro.vendor.mtk_fm_short_antenna_support") == "1") {
             return true; // Support wireless FM Radio on MTK chips
         }
 }
