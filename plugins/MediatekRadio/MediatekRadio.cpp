@@ -22,7 +22,7 @@
 #include <string.h>
 #include <iostream>
 #include <thread>
-#include <cutild/properties.h>
+#include <hybris/properties/properties.h>
 
 
 #include "MediatekRadio.h"
