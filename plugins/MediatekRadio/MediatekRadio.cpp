@@ -22,7 +22,7 @@
 #include <string.h>
 #include <iostream>
 #include <thread>
-#include <sys/system_properties.h>
+#include <libcutils/include/cutils/properties.h>
 
 
 #include "MediatekRadio.h"
@@ -81,7 +81,7 @@ bool MediatekRadio::isHeadsetAvailable() {
 // check if there is an actual antenna available
 bool MediatekRadio::isAntennaAvailable() {
         char *antenna = NULL;
-        __system_property_get("ro.vendor.mtk_fm_short_antenna_support", antenna, "0");
+        property_get("ro.vendor.mtk_fm_short_antenna_support", antenna, "0");
         if (antenna == "1") {
             return true; // Support wireless FM Radio on MTK chips
         }
