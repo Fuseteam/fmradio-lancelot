@@ -86,7 +86,7 @@ bool MediatekRadio::isAntennaAvailable() {
             return true; // Support wireless FM Radio on MTK chips
         } else if(isHeadsetAvailable()){
 			return true; // headset is plugged in to serve as antenna
-	    else {
+	    } else {
 			return false;
 		}
 }
