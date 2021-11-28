@@ -22,7 +22,6 @@
 #include <string.h>
 #include <iostream>
 #include <thread>
-#include <libcutils/include/cutils/properties.h>
 
 #include "MediatekRadio.h"
 #include "common.cpp"
