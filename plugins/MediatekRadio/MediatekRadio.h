@@ -31,6 +31,7 @@ private:
 	void mute();
 	void unmute();
 	bool isHeadsetAvailable();
+	bool isAntennaAvailable();
 	int getRssi();
 	void startVolumeUpdater();
 	void stopVolumeUpdater();
