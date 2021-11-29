@@ -126,7 +126,7 @@ QByteArray MediatekRadio::startRadio(int freq) {
 
 	if(isAntennaAvailable()) {
 
-		int ret = 0;
+		/*int ret = 0;
 
 		if((ret = COM_open_dev(FM_DEV_NAME, &idx)) < 0) {
 			printf("error opening device: %d\n", ret);
@@ -138,11 +138,11 @@ QByteArray MediatekRadio::startRadio(int freq) {
 			return "Error";
 		}
 
-		preparePulseAudio();
+		//preparePulseAudio();
 
 		radioRunning = true;
 		//startVolumeUpdater();
-
+*/
 		return "Stop radio";
 	} else {
 		return "Headset not available";
