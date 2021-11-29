@@ -80,7 +80,7 @@ bool MediatekRadio::isHeadsetAvailable() {
 
 // check if there is an actual antenna available
 bool MediatekRadio::isAntennaAvailable() {
-        char *antenna = NULL;
+        int antenna = 0;
         property_get("ro.vendor.mtk_fm_short_antenna_support", antenna, "0");
 		printf(antenna);
         if (antenna) {
