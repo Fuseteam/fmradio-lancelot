@@ -12,7 +12,7 @@ set(CMAKE_AUTOMOC ON)
 add_library(${PLUGIN} MODULE ${SRC})
 set_target_properties(${PLUGIN} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PLUGIN})
 qt5_use_modules(${PLUGIN} Qml Quick DBus)
-find_package(libandroid-properties1)
+target_link_libraries(libandroid-properties1)
 
 execute_process(
     COMMAND dpkg-architecture -qDEB_HOST_MULTIARCH
