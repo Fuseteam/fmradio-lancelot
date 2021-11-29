@@ -10,7 +10,6 @@ set(
 set(CMAKE_AUTOMOC ON)
 
 add_library(${PLUGIN} MODULE ${SRC})
-target_link_libraries(libandroid-properties1)
 set_target_properties(${PLUGIN} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PLUGIN})
 qt5_use_modules(${PLUGIN} Qml Quick DBus)
 

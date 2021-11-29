@@ -4,5 +4,8 @@
   "kill": "fmradio",
   "dependencies_host": [
     "libandroid-properties-dev"
+  ],
+  "dependencies_target": [
+    "libandroid-properties-dev"
   ]
 }
