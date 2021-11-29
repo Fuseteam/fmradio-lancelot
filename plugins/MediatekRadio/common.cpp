@@ -78,11 +78,12 @@ int COM_pwr_up(int fd, int band, int freq)
     parm.space = FM_SEEK_SPACE;
 /*
     ret = ioctl(fd, FM_IOCTL_POWERUP, &parm);
+    */
     if (ret) {
         printf("%s, failed\n", __func__);
     }
     printf("%s, [fd=%d] [ret=%d]\n", __func__, fd, ret);
-    return ret;*/
+    return ret;
 }
 
 int COM_pwr_down(int fd, int type)
