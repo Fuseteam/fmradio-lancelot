@@ -13,7 +13,7 @@ add_library(${PLUGIN} MODULE ${SRC})
 set_target_properties(${PLUGIN} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PLUGIN})
 qt5_use_modules(${PLUGIN} Qml Quick DBus)
 find_package(PkgConfig)
-pkg_check_modules(ANDROID_PROPERTIES libandroid-properties1 REQUIRED)
+pkg_check_modules(ANDROID_PROPERTIES libandroid-properties REQUIRED)
 target_link_libraries(${PLUGIN} ${ANDROID_PROPERTIES_LIBRARIES})
 
 execute_process(
