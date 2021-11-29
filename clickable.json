@@ -6,6 +6,6 @@
     "libandroid-properties-dev"
   ],
   "dependencies_target": [
-    "libandroid-properties-dev"
+    "libandroid-properties1"
   ]
 }
