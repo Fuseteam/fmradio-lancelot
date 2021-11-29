@@ -22,6 +22,8 @@
 #include <string.h>
 #include <iostream>
 #include <thread>
+#include <hybris/properties/properties.h>
+
 
 #include "MediatekRadio.h"
 #include "common.cpp"
@@ -76,6 +78,18 @@ bool MediatekRadio::isHeadsetAvailable() {
 
 }
 
+// check if there is an actual antenna available
+bool MediatekRadio::isAntennaAvailable() {
+        //char *antenna = NULL;
+        //property_get("ro.vendor.mtk_fm_short_antenna_support", antenna, "0");
+        if (true) {
+            return true; // Support wireless FM Radio on MTK chips
+        } else if(isHeadsetAvailable()){
+			return true; // headset is plugged in to serve as antenna
+	    } else {
+			return false;
+		}
+}
 // This is needed to route the FM input to the headphones
 void MediatekRadio::preparePulseAudio() {
 
@@ -110,7 +124,7 @@ void MediatekRadio::stopVolumeUpdater() {
 // Start the radio
 QByteArray MediatekRadio::startRadio(int freq) {
 
-	if(isHeadsetAvailable()) {
+	if(isAntennaAvailable()) {
 
 		int ret = 0;
 
@@ -118,7 +132,7 @@ QByteArray MediatekRadio::startRadio(int freq) {
 			printf("error opening device: %d\n", ret);
 			return "Error";
 		}
-
+		
 		if((ret = COM_pwr_up(idx, FM_BAND_UE, freq)) < 0) {
 			printf("error powering up: %d\n", ret);
 			return "Error";
@@ -128,7 +142,6 @@ QByteArray MediatekRadio::startRadio(int freq) {
 
 		radioRunning = true;
 		startVolumeUpdater();
-
 		return "Stop radio";
 	} else {
 		return "Headset not available";
