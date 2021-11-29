@@ -82,7 +82,8 @@ bool MediatekRadio::isHeadsetAvailable() {
 bool MediatekRadio::isAntennaAvailable() {
         char *antenna = NULL;
         property_get("ro.vendor.mtk_fm_short_antenna_support", antenna, "0");
-        if (antenna ==	 '1') {
+		cout << antenna;
+        if (antenna ==	 "1") {
             return true; // Support wireless FM Radio on MTK chips
         } else if(isHeadsetAvailable()){
 			return true; // headset is plugged in to serve as antenna
