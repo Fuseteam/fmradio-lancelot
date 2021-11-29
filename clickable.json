@@ -2,7 +2,7 @@
   "clickable_minimum_required": "6.12.2",
   "builder": "cmake",
   "kill": "fmradio",
-  "dependencies_host": [
+  "dependencies_target": [
     "libandroid-properties-dev"
   ]
 }
