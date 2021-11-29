@@ -132,12 +132,12 @@ QByteArray MediatekRadio::startRadio(int freq) {
 			printf("error opening device: %d\n", ret);
 			return "Error";
 		}
-/*
+		
 		if((ret = COM_pwr_up(idx, FM_BAND_UE, freq)) < 0) {
 			printf("error powering up: %d\n", ret);
 			return "Error";
 		}
-*/
+
 		//preparePulseAudio();
 
 		radioRunning = true;
