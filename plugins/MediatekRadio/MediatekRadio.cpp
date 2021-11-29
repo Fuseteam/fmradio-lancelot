@@ -138,7 +138,7 @@ QByteArray MediatekRadio::startRadio(int freq) {
 			return "Error";
 		}
 
-		preparePulseAudio();
+		//preparePulseAudio();
 
 		radioRunning = true;
 		startVolumeUpdater();
