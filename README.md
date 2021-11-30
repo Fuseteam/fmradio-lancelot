@@ -1,10 +1,11 @@
 # FM Radio
 
-FM Radio app for UT on the Vollaphone
+FM Radio app for UT on the Xiaomi Redmi 9
 
 ## License
 
 Copyright (C) 2020  venji10
+Copyright (C) 2021  Rahammetoela Toekiman
 
 Licensed under the Apache Software License 2.0
 
